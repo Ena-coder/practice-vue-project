@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <van-button type="primary">主要按钮</van-button>
     <router-view/>
   </div>
 </template>
