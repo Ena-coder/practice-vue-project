@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <van-button type="primary" @click="navToIconPage">跳转到图标页面</van-button>
+    <van-button type="primary" @click="navToPage('/about')">跳转到图标排列页面</van-button>
+    <van-button type="primary" @click="navToPage('/testVuex')">跳转到vuex测试页面</van-button>
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -10,13 +11,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '欢迎来到测试页面'
     }
   },
   methods:{
-    navToIconPage(){
-      this.$router.push('/about')
-      
+    navToPage(url){
+      this.$router.push(url)
     }
   }
 }

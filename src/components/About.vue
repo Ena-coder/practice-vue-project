@@ -1,6 +1,9 @@
 <template>
   <div class="about">
     <h2>about</h2>
+    <router-link :to="{name:'HelloWorld'}">
+      <van-button type="info">返回</van-button>
+    </router-link>
     <van-button type="primary" @click="changeStyle">更改样式</van-button>
     <div v-if="!iscolum" class="flex-row" >
       <van-image v-for="img in imgList" :key="index" width="60" height="60" radius="10"  lazy-load fit="cover" :src="img" />
@@ -8,7 +11,6 @@
     <div v-else="iscolum" class="flex-column">
       <van-image v-for="img in imgList" :key="index" width="60" height="60" radius="10"  lazy-load fit="cover" :src="img" />
     </div>
-      
   </div>
 </template>
 <script>
