@@ -11,7 +11,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '欢迎来到测试页面'
+      msg: '测试sass语法成功！'
     }
   },
   methods:{
@@ -23,7 +23,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped >
+.hello {
+  h1 {
+    font-weight: bold;
+  }
+}
 h1, h2 {
   font-weight: normal;
 }
